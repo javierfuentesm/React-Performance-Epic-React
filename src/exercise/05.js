@@ -40,11 +40,10 @@ function AppProvider({children}) {
     grid: initialGrid,
   })
   // 🐨 memoize this value with React.useMemo
-  const memoizedState = React.useMemo(() => state, [state])
-  const memoizedDispatch = React.useMemo(() => dispatch, [])
+
   return (
-    <AppStateContext.Provider value={memoizedState}>
-      <GridUpdaterContext.Provider value={memoizedDispatch}>
+    <AppStateContext.Provider value={state}>
+      <GridUpdaterContext.Provider value={dispatch}>
         {children}
       </GridUpdaterContext.Provider>
     </AppStateContext.Provider>
