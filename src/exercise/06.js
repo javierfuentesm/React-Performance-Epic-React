@@ -64,7 +64,7 @@ function useAppState() {
 function useDogState() {
   const context = React.useContext(DogContext)
   if (!context) {
-    throw new Error('useAppState must be used within the AppProvider')
+    throw new Error('useAppState must be used within the DogProvider')
   }
   return context
 }
