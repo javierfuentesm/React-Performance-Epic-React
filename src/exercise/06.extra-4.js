@@ -25,7 +25,7 @@ const initialGrid = Array.from({length: 100}, () =>
 // 💰 initialGrid[row][column]
 
 const cellAtoms = atomFamily({
-  key: 'ElementPosition',
+  key: 'cells',
   default: ({row, column}) => initialGrid[row][column],
 })
 
